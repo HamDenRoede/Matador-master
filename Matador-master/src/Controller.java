@@ -24,6 +24,7 @@ class Controller{
         UI = new UI();
 
         String[] fields_data = io.readFieldData(path);
+        ArrayList<Player> player_data = io.readGameData();
 
         board = new Board(fields_data);
         //  String[] cards_data = io.readCardData(null);

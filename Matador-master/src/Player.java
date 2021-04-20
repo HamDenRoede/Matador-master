@@ -13,6 +13,8 @@ public class Player {
     private int passStartMoney = 4000;              // Money given when a player passes start field
     private int landOnStartMoney = 4000;            // Money given if a player lands on start field
     private ArrayList Deeds = new ArrayList();
+    private int turnsleft;
+    private boolean next;
 
     public Player(String name, int balance) {
         this.name = name;
@@ -123,5 +125,16 @@ public class Player {
 
     public int getBalance() {
         return this.getBankAccount().getBalance();
+    }
+
+    public Player(int id, String name, int balance, int position, int turnsleft, boolean next)
+    {
+        this.bankAccount = new BankAccount(balance);
+
+        this.id = id;
+        this.name = name;
+        this.position = position;
+        this.turnsleft = turnsleft;
+        this.next = next;
     }
 }
